@@ -25,6 +25,8 @@ export const Inputs = () => {
 		selectTip(customTip);
 	};
 
+	console.log(error);
+
 	return (
 		<section className="flex flex-col gap-6">
 			<div>
@@ -85,7 +87,7 @@ export const Inputs = () => {
 						{error !== "" && error}
 					</label>
 				</div>
-				<div className="relative flex items-center">
+				<div className="relative flex items-center mt-2">
 					<input
 						type="number"
 						min="0"
@@ -93,9 +95,9 @@ export const Inputs = () => {
 						onChange={(e) => {
 							setPeople(Number(e.target.value));
 						}}
-						className={`w-[100%] mt-2 bg-very-light-grayish-cyan text-right rounded-md text-2xl no-spinner pl-8 pr-4 py-2 text-very-dark-cyan font-bold  ${
+						className={`w-[100%] bg-very-light-grayish-cyan text-right rounded-md text-2xl no-spinner pl-8 pr-4 py-2 text-very-dark-cyan font-bold  ${
 							error !== ""
-								? "focus:outline-red-600 border-2 border-red-600"
+								? "focus:outline-red-600"
 								: "focus:outline-strong-cyan"
 						}`}
 					/>

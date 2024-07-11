@@ -7,7 +7,7 @@ export const Result = ({
 
 	const handleClick = () => {
 		if (formRef != null) {
-			formRef.current?.reset();
+			formRef.current?.reset;
 		}
 		reset();
 	};
